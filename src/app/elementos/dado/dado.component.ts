@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dado.component.css']
 })
 export class DadoComponent {
+ numero:number=0
+  lanzarDado(){
+    this.numero = Math.round(Math.random()*((6 - 1)))
+  }
 
 }
