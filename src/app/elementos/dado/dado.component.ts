@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { min } from 'rxjs';
 
 @Component({
   selector: 'app-dado',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dado.component.css']
 })
 export class DadoComponent {
- numero:number=0
-  lanzarDado(){
-    this.numero = Math.round(Math.random()*((6 - 1)))
-  }
+  numeroAleatorio() {
+    var max = 6
+    var min = 1
 
+    //Generamos numeros aleatorios entre 1 - 6
+    return Math.round(Math.random() * (max - min) + 1)
+  }
 }
